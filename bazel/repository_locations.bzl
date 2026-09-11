@@ -19,6 +19,11 @@ REPOSITORY_LOCATIONS = dict(
         strip_prefix = "protoc-gen-validate-1.3.0",
         urls = ["https://github.com/bufbuild/protoc-gen-validate/archive/refs/tags/v1.3.0.tar.gz"],
     ),
+    com_github_bufbuild_protovalidate = dict(
+        sha256 = "297dba5cdc25fa478c597e53af6c4ccf330c826e566384774b5176c13c8d3bd8",
+        strip_prefix = "protovalidate-1.1.1",
+        urls = ["https://github.com/bufbuild/protovalidate/releases/download/v1.1.1/protovalidate-1.1.1.tar.gz"],
+    ),
     com_github_grpc_grpc = dict(
         sha256 = "0af37b800953130b47c075b56683ee60bdc3eda3c37fc6004193f5b569758204",
         strip_prefix = "grpc-1.76.0",

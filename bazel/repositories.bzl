@@ -19,6 +19,10 @@ def xds_api_dependencies():
         locations = REPOSITORY_LOCATIONS,
     )
     xds_http_archive(
+        name = "com_github_bufbuild_protovalidate",
+        locations = REPOSITORY_LOCATIONS,
+    )
+    xds_http_archive(
         name = "com_github_grpc_grpc",
         locations = REPOSITORY_LOCATIONS,
     )

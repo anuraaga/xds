@@ -28,6 +28,7 @@ _COMMON_PROTO_DEPS = [
     "@com_google_googleapis//google/api:http_proto",
     "@com_google_googleapis//google/rpc:status_proto",
     "@com_envoyproxy_protoc_gen_validate//validate:validate_proto",
+    "@protovalidate//proto/protovalidate/buf/validate:validate_proto",
 ]
 
 def _proto_mapping(dep, proto_dep_map, proto_suffix):
@@ -127,6 +128,7 @@ def xds_proto_package(
         proto = name,
         visibility = ["//visibility:public"],
         deps = depset([_go_proto_mapping(dep) for dep in deps] + [
+            "@build_buf_gen_go_bufbuild_protovalidate_protocolbuffers_go//buf/validate:go_default_library",
             "@com_envoyproxy_protoc_gen_validate//validate:go_default_library",
             "@org_golang_google_protobuf//types/known/anypb:go_default_library",
             "@org_golang_google_protobuf//types/known/durationpb:go_default_library",
